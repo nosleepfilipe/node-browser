@@ -23,7 +23,7 @@ function downloadDrivers() {
       {
         name: "phantomjs-darwin",
         url:
-          "https://bitbucket.org/ariya/downloads/phantomjs/phantomjs-" +
+          "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-" +
           phantomVersion +
           "-macosx.zip",
       },
@@ -46,7 +46,7 @@ function downloadDrivers() {
       {
         name: "phantomjs.exe",
         url:
-          "https://bitbucket.org/ariya/downloads/phantomjs/phantomjs-" +
+          "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-" +
           phantomVersion +
           "-windows.zip",
       },
@@ -55,7 +55,7 @@ function downloadDrivers() {
       {
         name: "phantomjs-linux",
         url:
-          "https://bitbucket.org/ariya/downloads/phantomjs/phantomjs-" +
+          "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-" +
           phantomVersion +
           "-linux-x86_64.tar.bz2",
       },
