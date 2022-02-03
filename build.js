@@ -12,7 +12,6 @@ var debug = require("debug")("browser");
 
 var chromeVersion = "2.20";
 var phantomVersion = "1.9.7";
-var basePath = "https://bitbucket.org/ariya/";
 var driversDest = path.resolve(__dirname, "./driver");
 
 /**
@@ -23,27 +22,42 @@ function downloadDrivers() {
     darwin: [
       {
         name: "phantomjs-darwin",
-        url: "phantomjs/phantomjs-" + phantomVersion + "-macosx.zip",
+        url:
+          "https://bitbucket.org/ariya/downloads/phantomjs/phantomjs-" +
+          phantomVersion +
+          "-macosx.zip",
       },
       {
         name: "chromedriver-darwin",
-        url: "chromedriver/" + chromeVersion + "/chromedriver_mac32.zip",
+        url:
+          "https://npm.taobao.org/mirrors/chromedriver/" +
+          chromeVersion +
+          "/chromedriver_mac32.zip",
       },
     ],
     win32: [
       {
         name: "chromedriver.exe",
-        url: "chromedriver/" + chromeVersion + "/chromedriver_win32.zip",
+        url:
+          "https://npm.taobao.org/mirrors/chromedriver/" +
+          chromeVersion +
+          "/chromedriver_win32.zip",
       },
       {
         name: "phantomjs.exe",
-        url: "phantomjs/phantomjs-" + phantomVersion + "-windows.zip",
+        url:
+          "https://bitbucket.org/ariya/downloads/phantomjs/phantomjs-" +
+          phantomVersion +
+          "-windows.zip",
       },
     ],
     linux: [
       {
         name: "phantomjs-linux",
-        url: "phantomjs/phantomjs-" + phantomVersion + "-linux-x86_64.tar.bz2",
+        url:
+          "https://bitbucket.org/ariya/downloads/phantomjs/phantomjs-" +
+          phantomVersion +
+          "-linux-x86_64.tar.bz2",
       },
     ],
   };
@@ -68,7 +82,7 @@ function downloadDrivers() {
     debug("download", item);
 
     download
-      .get(basePath + item.url)
+      .get(item.url)
       // .rename(item.name)
       .dest(path.resolve(__dirname, "./driver/"))
       .run(function (err, files) {
